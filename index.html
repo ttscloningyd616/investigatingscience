@@ -1,0 +1,58 @@
+# ttscloningyd616.github.io
+my investigating science
+<html>
+
+<head>
+<title>Da New Pink Trombone</title>
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="mobile-web-app-capable" content="yes">
+</head>
+
+<body style="margin: 0; padding: 0; background-color:black">
+
+<form id="ipaForm">
+  <input id="ipaInput" type="text" name="ipa"></input>
+  <br/>
+  <input id="ipaSubmitButton" type="submit">
+  <br/><br/>
+  <label>
+    <input id="exploreModeToggle" type="checkbox">
+    Explore mode (left click sticks and logs touch coordinates, right click removes most recent click)
+  </label>
+  <br/>
+  <label>
+    <input id="vowelDoubling" type="checkbox">
+    Adjust lengths of phonemes (consonants are twice as fast as vowels, for dipthongs only the first vowel is longer)
+  </label>
+</form>
+
+<canvas id="tractCanvas" width="600" height="600"
+style = "position: absolute; z-index: 1;  background-color:transparent; margin: 0; padding: 0;">
+</canvas>
+<canvas id="backCanvas" width="600" height="600"
+style = "position: absolute; z-index: 0; background-color:transparent; margin: 0; padding: 0;">
+</canvas>
+
+<script type="text/javascript" src="./utils/math.js"></script>
+<script type="text/javascript" src="./utils/perlin-and-simplex-noise.js"></script>
+<script type="text/javascript" src="./utils/browser-detection.js"></script>
+<script type="text/javascript" src="./utils/make-button.js"></script>
+<script type="text/javascript" src="./utils/IPA-mappings.js"></script>
+
+<script type="text/javascript" src="./config.js"></script>
+
+<!-- The only order requirement is that globals is before all the /lib files and the lib files are before the index.js -->
+<script type="text/javascript" src="./globals.js"></script>
+
+<script type="text/javascript" src="./lib/ui.js"></script>
+<script type="text/javascript" src="./lib/audio-system.js"></script>
+<script type="text/javascript" src="./lib/glottis.js"></script>
+<script type="text/javascript" src="./lib/tract.js"></script>
+<script type="text/javascript" src="./lib/tract-ui.js"></script>
+
+<script type="text/javascript" src="./index.js"></script>
+<script type="text/javascript" src="./utils/ipa-mappings.js"></script>
+<script type="text/javascript" src="./form-logic.js"></script>
+
+</body>
+</html>
